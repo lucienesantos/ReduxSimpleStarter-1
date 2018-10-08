@@ -1,7 +1,15 @@
-import { combineReducers } from 'redux';
+import {combineReducers} from 'redux';
+import { cardListReducer } from './cardListReducer';
 
-const rootReducer = combineReducers({
-  state: (state = {}) => state
+export const Reducers = combineReducers({
+  cardListManager: cardListReducer
 });
 
-export default rootReducer;
+// Quando a aplicação possui muitos reducers deve ser combinados para serem enviados à store 
+
+// import { combineReducers } from 'redux';
+// const rootReducer = combineReducers({
+//   state: (state = {}) => state
+// });
+
+// export default rootReducer;
