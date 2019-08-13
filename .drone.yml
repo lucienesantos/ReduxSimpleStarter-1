@@ -5,3 +5,11 @@ steps:
     image: alpine
     commands:
       - echo Hello World!
+  slack:
+    image: plugins/slack
+    webhook: https://hooks.slack.com/services/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
+    channel: ci
+    username: Drone-CI
+    icon-url: https://avatars0.githubusercontent.com/oa/679950?s=40&u=0c52bd0add4998243dc643a20c356038fc713bc0&v=4
+    when:
+      status: [success, failure]
